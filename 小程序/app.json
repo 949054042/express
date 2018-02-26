@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/new/new",
+    "pages/search/search",
+    "pages/talk/talk",
+    "pages/person/person",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#707070",
+    "border-style":"white",
+    "select-color":"#e02e24",
+    "background-color":"#f8f8f8",
+    "list":[
+            {
+              "pagePath": "pages/index/index",
+              "text": "首页",
+              "iconPath": "img/main.png",
+              "selectedIconPath": "img/main_02.png"
+            },
+            {
+              "pagePath": "pages/new/new",
+              "text": "新品",
+              "iconPath": "img/new.png",
+              "selectedIconPath": "img/new_02.png"
+            },
+            {
+              "pagePath": "pages/search/search",
+              "text": "搜索",
+              "iconPath": "img/search.png",
+              "selectedIconPath": "img/search_02.png"
+            },
+            {
+              "pagePath": "pages/talk/talk",
+              "text": "聊天",
+              "iconPath": "img/talk.png",
+              "selectedIconPath": "img/talk_02.png"
+            },
+            {
+              "pagePath": "pages/person/person",
+              "text": "个人中心",
+              "iconPath": "img/person.png",
+              "selectedIconPath": "img/person_02.png"
+            }
+    ]
+  }
+}

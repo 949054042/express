@@ -1,0 +1,98 @@
+/**index.wxss**/
+.container{
+  background-color:#ffffff;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.go{
+  height:40px;
+  background:#ffffff
+}
+.go .view{
+  display: flex;
+  height:100px;
+  width:140%
+}
+.go .nav{
+  float:left;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-size:14px;
+  font-family: "宋体";
+  line-height:40px;
+  height:40px;
+  color: #58585a
+}
+.top_img{
+  width:100vw
+}
+.tab{
+  border-bottom:18rpx solid #f2f2f2;
+  padding-top:40rpx;
+  padding-bottom:40rpx;
+
+}
+.tabs{
+  width:20%;
+  float:left;
+  text-align: center;
+  margin-bottom:40rpx;
+}
+.tabs image{
+  width:75rpx;
+  height:75rpx;
+}
+.tabs text{
+  font-size:26rpx;
+  color:#636363;
+
+}
+.brand{
+   padding-bottom:11rpx;
+}
+.brand image{
+  width:100vw;
+  height:222rpx;
+  border-bottom:18rpx solid #f2f2f2;
+  margin-bottom:11rpx;
+}
+.goods{
+  width:49%;
+  float:left;
+  box-sizing:border-box;
+  margin-right:3rpx;
+  border-bottom:8rpx solid #fff0e8;
+}
+.goods image{
+  height:377rpx;
+  width:100%;
+}
+.goods .miaoshu{
+  font-size:26rpx;
+  color:#1c1c1c;
+  line-height:33rpx;
+  margin-left:24rpx;
+  margin-right:24rpx;
+}
+.goods .footer{
+  margin-top:33rpx;
+}
+.goods .footer text:nth-child(1){
+  float:left;
+  font-size:26rpx;
+  color:#1c1c1c;
+  margin-left:24rpx;
+  color:red
+}
+.goods .footer text:nth-child(2){
+  float:right;
+  font-size:26rpx;
+  color:#1c1c1c;
+  margin-right:24rpx;
+  color:#acacac
+}

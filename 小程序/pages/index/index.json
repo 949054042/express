@@ -1,0 +1,7 @@
+
+  {
+    "navigationBarTitleText": "拼多多",
+    "navigationBarTextStyle":"#fff",
+    "navigationBarBackgroundColor": "#e02e24",
+    "enablePullDownRefresh":"true"
+  }

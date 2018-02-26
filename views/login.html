@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="utf8"/>
+        <meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0,user-scalable=0"/>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="./js/jquery.min.js"></script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class='par' style="background:url(./img/denglu.jpg);background-size:cover;background-repeat:no-repeat">
+        <div class='container'>
+            <div class='row'>
+              <div class='col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3' style='border:1px solid gray;padding:0;background:#fff'>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist" style='margin-bottom: 10px'>
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登陆</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="home">
+                    <form action="http://127.0.0.1:8087/login" method='post' enctype="application/x-www-form-urlencoded" class="form-horizontal">
+                        <div class='form-group'>
+                          <label for='name' class='control-label col-xs-3 col-sm-4'>用户名</label>
+                          <div class='col-xs-6'>
+                            <input type="text" placeholder="请输入用户名" name='name' id='name' class='form-control'/>
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <label for='pass' class='control-label col-xs-3 col-sm-4'>密码</label>
+                          <div class='col-xs-6'>
+                            <input type="password" placeholder="请输入用户密码" name='pass' id='pass' class='form-control input-danger'/>
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <div class="col-xs-4 col-xs-offset-4">
+                                <input type='submit' placeholder="登陆" class='form-control' class='btn-md'/>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="profile">
+                    <form action="http:127.0.0.1:8087/register" action='post' enctype="application/x-www-form-urlencoded" class="form-horizontal">
+                        <div class='form-group'>
+                          <label for='name' class='control-label col-xs-3 col-sm-4'>用户名</label>
+                          <div class='col-xs-6'>
+                            <input type="text" placeholder="请输入用户名" name='z_name' id='name2' class='form-control'/>
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <label for='pass2' class='control-label col-xs-3 col-sm-4'>密码</label>
+                          <div class='col-xs-6'>
+                            <input type="password" placeholder="请输入用户密码" name='z_pass' id='pass2' class='form-control input-danger'/>
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <div class="col-xs-4 col-xs-offset-4">
+                                <input type='submit' placeholder="提交" class='form-control' class='btn-md'/>
+                          </div>
+                          <div class="col-xs-4">
+                            <img src="http://127.0.0.1:8087/yz" alt='网络错误'/>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </body>
+  </html>
+  <script>
+    $(document).ready(function(){
+          var par=$(".par").eq(0);
+          par.css({
+            position:"fixed",
+            width:"100vw",
+            height:"100vh",
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"center"
+          })
+          $("img").bind("click",function(ev){
+            var num=parseInt(Math.random()*10)
+            var src="http://127.0.0.1:8087/yz?"+num
+            $(this).prop("src",src);
+          })
+    })
+  </script>

@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-x scroll-with-animation class="go">
+    <view class="view">
+      <view class="nav" bindtap='change' data-id="0" style="color:{{dev!=0}}">首页</view>
+      <view class="nav" bindtap='change'  data-id="1" style="color:{{dev!=1}}">男装</view>
+      <view class="nav" bindtap='change'  data-id="2" style="color:{{dev!=2}}">年货</view>
+      <view class="nav" bindtap='change'  data-id="3" style="color:{{dev!=3}}">手机</view>
+      <view class="nav" bindtap='change'  data-id="4" style="color:{{dev!=4}}">鞋包</view>
+      <view class="nav" bindtap='change' data-id="5" style="color:{{dev!=5}}">电器</view>
+      <view class="nav" bindtap='change' data-id="6" style="color:{{dev!=6}}">服饰</view>
+      <view class="nav" bindtap='change'  data-id="7" style="color:{{dev!=7}}">百货</view>
+       <view class="nav" bindtap='change'  data-id="8" style="color:{{dev!=8}}">百货</view>
+        <view class="nav" bindtap='change'  data-id="9" style="color:{{dev!=9}}">百货</view>
+    </view>
+  </scroll-view>
+  <view>
+      <view class="nav" hidden='{{dev!=0}}'>
+        <swiper indicator-dots='true' indicator-color='#f9f9fb'>
+          <block wx:for="{{imgarr}}" wx:item="show" >
+                    <swiper-item item-id="{{id}}" class="top_show">
+                <image src='{{item}}' class="top_img"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+        <swiper class="tab">
+          <swiper-item class="clearfix">
+              <view wx:for="{{tabs}}" class="tabs">
+                <image src="{{item.url}}"></image>
+                <text>
+                  {{item.text}}
+                </text>
+              </view>
+          </swiper-item>
+          <swiper-item>
+              <view wx:for="{{tabs}}" class="tabs">
+                <image src="{{item.url}}"></image>
+                <text>
+                  {{item.text}}
+                </text>
+              </view>
+          </swiper-item>
+         </swiper>
+         <view class="brand">
+          <image src="/img/brand.png"></image>
+         </view>
+         <scroll-view scroll-y="true"  bindscrolltolower="get" bindscroll="scroll" scroll-top="{{scrollTop}}" style="height:{{scrollHeight}}px;">
+            <view class="clearfix">
+            <view wx:for="{{goods}}" class="goods">
+              <image src="{{item.url}}"></image>
+              <text class="miaoshu">{{item.text}}</text>
+              <view class="footer">
+                <text>￥{{item.price}}</text><text>已团{{item.saleNum}}万件</text>
+              </view>
+            </view>
+          </view>
+           <loading hidden="{{hidden}}">正在加载中</loading>
+         </scroll-view>
+      </view>
+      <view class="nav" hidden='{{dev!=1}}'><text>男装</text></view>
+      <view class="nav" hidden='{{dev!=2}}'><text>年货</text></view>
+      <view class="nav" hidden='{{dev!=3}}'><text>手机</text></view>
+      <view class="nav" hidden='{{dev!=4}}'><text>鞋包</text></view>
+      <view class="nav" hidden='{{dev!=5}}'><text>电器</text></view>
+      <view class="nav" hidden='{{dev!=6}}'><text>服饰</text></view>
+      <view class="nav" hidden='{{dev!=7}}'><text>百货</text></view>
+      <view class="nav" hidden='{{dev!=8}}'><text>服饰</text></view>
+      <view class="nav" hidden='{{dev!=9}}'><text>百货</text></view>
+  </view>
+</view>
